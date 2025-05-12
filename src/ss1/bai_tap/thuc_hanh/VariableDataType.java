@@ -1,6 +1,4 @@
-package thuc_hanh;
-
-import java.net.SocketTimeoutException;
+package ss1.bai_tap.thuc_hanh;
 
 public class VariableDataType {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package thuc_hanh;
+package ss1.bai_tap.thuc_hanh;
 
 //import java.util.Scanner;
 //
