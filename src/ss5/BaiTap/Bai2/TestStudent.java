@@ -16,12 +16,8 @@ class Student {
         this.classes = classes;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getClasses() {
-        return classes;
+    public void display (){
+        System.out.println("Name: " + name+ " "+"Class: "+ classes);
     }
 }
 
@@ -29,14 +25,11 @@ public class TestStudent {
     public static void main(String[] args) {
         Student student = new Student();
         System.out.println("Student info: ");
-        System.out.println("Name: " + student.getName());
-        System.out.println("Class: "+ student.getClasses());
-
+        student.display();
         student.setName("Nam");
         student.setClasses("C03");
 
         System.out.println("New student info: ");
-        System.out.println("Name: " + student.getName());
-        System.out.println("Class: " + student.getClasses());
+        student.display();
     }
 }
