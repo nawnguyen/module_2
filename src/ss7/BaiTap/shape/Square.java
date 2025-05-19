@@ -11,7 +11,7 @@ public class Square extends Rectangle {
     @Override
     public void resize(double percent) {
         side += side * percent / 100;
-        super.resize(percent); // cập nhật width & height của Rectangle
+        super.resize(percent);
     }
 
     @Override
