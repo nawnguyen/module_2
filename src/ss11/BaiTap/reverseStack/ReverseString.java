@@ -1,23 +1,25 @@
 package ss11.BaiTap.reverseStack;
 
-import java.util.Stack;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class ReverseString {
     public static void main(String[] args) {
         String input = "MỘT HAI BA BỐN";
-        String[] works = input.split(" ");
+        String[] words = input.split(" ");
 
-        Stack<String> wStack = new Stack<>();
-        for (String work : works) {
-            wStack.push(work);
+        Map<Integer, String> wordMap = new LinkedHashMap<>();
+        for (int i = 0; i < words.length; i++) {
+            wordMap.put(i, words[i]);
         }
+
         String output = "";
-        while (!wStack.isEmpty()) {
-            output += wStack.pop();
-            if (!wStack.isEmpty()) {
-                output += " ";
-            }
+        for (int i = words.length - 1; i >= 0; i--) {
+            output += wordMap.get(i);
+            if (i > 0) output += " ";
         }
-        System.out.println("Chuỗi sau khi đảo ngược từ: "+ output);
+
+        System.out.println("Chuỗi sau khi đảo ngược từ: " + output);
     }
 }
