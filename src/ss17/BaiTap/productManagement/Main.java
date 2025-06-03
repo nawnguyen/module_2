@@ -1,6 +1,6 @@
 package ss17.BaiTap.productManagement;
 
-import ss17.BaiTap.productManagement.Controller.ProductController;
+import ss17.BaiTap.productManagement.controller.ProductController;
 
 public class Main {
     public static void main(String[] args) {
