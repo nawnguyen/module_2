@@ -1,30 +1,17 @@
 package ss14.studentManager;
 
 import ss14.studentManager.controller.StudentController;
-import ss14.studentManager.model.Student;
+import ss14.studentManager.repository.StudentRepository;
+import ss14.studentManager.service.StudentService;
 import ss14.studentManager.view.StudentView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> students = new ArrayList<>();
-        students.add(new Student(3, "Chuối"));
-        students.add(new Student(2, "Ổi"));
-        students.add(new Student(5, "Chuối"));
-        students.add(new Student(1, "Xoài"));
-
+        StudentRepository repository = new StudentRepository();
+        StudentService service = new StudentService(repository);
         StudentView view = new StudentView();
-        StudentController controller = new StudentController(students, view);
+        StudentController controller = new StudentController(service, view);
 
-        System.out.println("Before sorting:");
-        controller.displayStudents();
-
-        controller.sortStudentsByNameThenId();
-
-        System.out.println("\nAfter sorting by name then ID:");
-        controller.displayStudents();
+        controller.displaySortedStudents();
     }
 }
-

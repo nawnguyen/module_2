@@ -1,8 +1,8 @@
 package ss14.studentManager.model;
 
 public class Student {
-    public int id;
-    public String name;
+    private int id;
+    private String name;
 
     public Student(int id, String name) {
         this.id = id;
@@ -22,4 +22,3 @@ public class Student {
         return "Student{id=" + id + ", name='" + name + "'}";
     }
 }
-
