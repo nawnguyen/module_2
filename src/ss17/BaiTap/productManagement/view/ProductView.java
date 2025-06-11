@@ -1,6 +1,6 @@
-package ss17.BaiTap.productManagement.View;
+package ss17.BaiTap.productManagement.view;
 
-import ss17.BaiTap.productManagement.Model.Product;
+import ss17.BaiTap.productManagement.model.Product;
 
 import java.util.List;
 import java.util.Scanner;

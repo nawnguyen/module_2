@@ -1,4 +1,4 @@
-package ss17.BaiTap.productManagement.Model;
+package ss17.BaiTap.productManagement.model;
 
 import java.io.Serializable;
 
